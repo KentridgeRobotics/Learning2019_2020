@@ -10,3 +10,11 @@ Learning Resources
 You can install Visual Studio Code from here: [https://code.visualstudio.com](https://code.visualstudio.com)
 
 The Java Development Kit is available here: [http://jdk.java.net/13/](http://jdk.java.net/13/)
+
+
+## Learning Arduino
+
+We are using Arduino to learn about electronics and how to write code for programming electronic devices. Helpful links:
+
+https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0/intro
+https://learn.adafruit.com/adafruit-arduino-lesson-2-leds
