@@ -16,6 +16,22 @@ The Java Development Kit is available here: [http://jdk.java.net/13/](http://jdk
 
 We are using Arduino to learn about electronics and how to write code for programming electronic devices. Helpful links:
 
+### Downloading the software
+
+https://www.arduino.cc/en/Main/Software
+
+Try the link `Windows app Requires Win 8.1 or 10`, and see if you are allowed to install that. You may need an administrator key, or you can download the link `Windows ZIP file for non admin install`
+
+### Simple example: Blink
+
+Try this example to verify that everything is working. You will need an Arduino and a USB cable that fits. https://www.arduino.cc/en/Tutorial/Blink
+
+### Arduino language reference
+
+Arduino "Sketches" are written in a variant of C++. Language reference: https://www.arduino.cc/reference/en/
+
+### Online tutorials about Arduino
+
 https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0/intro
 
 https://learn.adafruit.com/adafruit-arduino-lesson-2-leds
