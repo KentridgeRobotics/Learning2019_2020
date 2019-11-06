@@ -35,3 +35,9 @@ Arduino "Sketches" are written in a variant of C++. Language reference: https://
 https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0/intro
 
 https://learn.adafruit.com/adafruit-arduino-lesson-2-leds
+
+
+### Using the distance sensor
+
+We are using a common ultrasonic distance sensor called an HC-SR04. See this page for details: https://www.makerguides.com/hc-sr04-arduino-tutorial/
+
