@@ -71,6 +71,13 @@ long getDistance() {
 }
 ```
 
+In order to use this, you need to include these lines in your `setup()` function:
+
+```
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT);
+```
+
 ### Figuring out what your Arduino is doing
 
 Use the `Serial.print` and `Serial.println` functions to write messages to the Serial monitor.
