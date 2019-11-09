@@ -41,3 +41,32 @@ https://learn.adafruit.com/adafruit-arduino-lesson-2-leds
 
 We are using a common ultrasonic distance sensor called an HC-SR04. See this page for details: https://www.makerguides.com/hc-sr04-arduino-tutorial/
 
+Measuring distance with this sensor works like this:
+
+* Set the TRIG pin to LOW
+* Wait 2 microseconds
+* Set the TRIG pin to HIGH
+* Wait 10 microseconds
+* Set the TRIG pin to LOW
+* Measure how long it takes for the ECHO pin to switch from high to low voltage
+
+On the Arduino:
+* you can set pins to HIGH or LOW using the `digitalWrite` command.
+* you can wait for for a number of microseconds using the `delayMicroseconds` command
+* you can wait for a pin to change from high to low (or low to high) using the `pulseIn` command
+
+Here is a sample implementation that returns the measured distance in centimeters.
+
+```
+// Returns distance in cm
+long getDistance() {
+  digitalWrite(trig, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trig, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig, LOW);
+  long echoTime = pulseIn(echo, HIGH);
+  long distance = (echoTime/2) / 29.1;
+  return distance;
+}
+```
