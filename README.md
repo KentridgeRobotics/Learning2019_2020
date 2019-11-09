@@ -70,3 +70,18 @@ long getDistance() {
   return distance;
 }
 ```
+
+### Figuring out what your Arduino is doing
+
+Use the `Serial.print` and `Serial.println` functions to write messages to the Serial monitor.
+
+For example:
+```
+int b = 123;
+Serial.print("Brightness:");
+Serial.println(b);
+```
+
+will print out:
+`Brightness:123`
+
