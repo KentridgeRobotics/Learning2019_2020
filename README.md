@@ -92,3 +92,6 @@ Serial.println(b);
 will print out:
 `Brightness:123`
 
+## Working with servo motors
+
+Follow this tutorial. https://learn.adafruit.com/adafruit-arduino-lesson-14-servo-motors/overview
