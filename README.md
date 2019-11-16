@@ -212,3 +212,4 @@ void setup() {
 }
 ```
 
+For a complete solution of this task using classes, see https://github.com/KentridgeRobotics/Learning2019_2020/blob/master/BlinkMany/BlinkMany.ino
