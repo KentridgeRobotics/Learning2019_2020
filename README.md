@@ -95,3 +95,13 @@ will print out:
 ## Working with servo motors
 
 Follow this tutorial. https://learn.adafruit.com/adafruit-arduino-lesson-14-servo-motors/overview
+
+## About delay() and multitasking
+
+We have used the `delay()` function to wait for a while. For example, in our initial LED project, we used a delay between lighting up different LEDs. This works fine when the Arduino has one job to do, but what happens when you want it to do different things at the same time, such as blinking LEDs while running a servo, or blinking one LED fast and another slowly.
+
+Generally, making a computer do multiple things at once is called "multitasking", and a lot of what goes into an operating system like Windows or Linux is code to make multitasking happen automatically. On the Arduino, there is no operating system, so you need to figure out how to multitask without any automatic help.
+
+Let's look at an example.
+
+
