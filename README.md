@@ -105,6 +105,9 @@ Generally, making a computer do multiple things at once is called "multitasking"
 Let's look at an example. Suppose we have a program to blink an LED on and off slowly:
 
 ```cpp
+void setup() {
+  pinMode(5, OUTPUT);
+}
 void loop() {
     digitalWrite(5, HIGH);
     delay(1000);
@@ -116,6 +119,9 @@ void loop() {
 And we have another program to blink an LED on and off quickly:
 
 ```cpp
+void setup() {
+  pinMode(6, OUTPUT);
+}
 void loop() {
     digitalWrite(6, HIGH);
     delay(111);
@@ -127,3 +133,34 @@ void loop() {
 Putting together these actions in sequnce doesn't work, because what happens is that the slow LED turns on for 500 ms and turns off for 500 ms, and then the fast LED blinks once (111 ms on and 111 ms off), and then the slow LED takes its turn again.
 
 So, how could you make both the fast-blinking and slow-blinking LEDs blink at the same time?
+
+## What time is it?
+
+On the Arduino, you can find out the number of milliseconds since the board started using the `millis()` function, which returns a `long` value (a 32-bit integer).
+
+How does this help? Recall that `loop()` runs over and over again, until you turn off the power to the Arduino.
+
+If you keep track of what time it is when you turn on an LED, you can rewrite the slow-blinking program like this:
+
+```cpp
+long lastChangeTime = 0;
+bool isLit = false;
+
+void setup() {
+  pinMode(5, OUTPUT);
+}
+void loop() {
+  long currentTime = millis();                 // what time is it?
+  if (currentTime - lastChangeTime > 500) {    // is it time to change the LED state?
+    if (isLit) {
+      digitalWrite(5, LOW);                    // turn off the LED
+    } else {
+      digitialWrite(5, HIGH);                  // turn on the LED
+    }
+    isLit = !isLit;                            // remember if the LED is on or off
+    lastChangeTime = currentTime;              // remember when we changed the LED state
+  }
+}
+```
+
+Now can you write code that blinks 2 or more LEDs at different rates? HINT: you will need to use different variables to keep track of the lastChangeTime and isLit for each LED.
