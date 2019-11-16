@@ -164,3 +164,51 @@ void loop() {
 ```
 
 Now can you write code that blinks 2 or more LEDs at different rates? HINT: you will need to use different variables to keep track of the lastChangeTime and isLit for each LED.
+
+## Keeping things organized
+
+If you've completed the task above, look at your code. For each LED, you have different variables for `isLit`, and `lastChangeTime`, and each has a different pin number that is turned on and off with `digitalWrite`. For 2 LEDs, this isn't too much of a problem, but once you're trying to control dozens of devices, it gets very difficult to figure out how these things relate.
+
+This is where the idea of a `class` helps. A `class` is a recipe for creating instances of the class, where an instance (also called an "object") is a container that hold variables and methods.
+
+This sounds complicated, but looking at an example should help.
+
+Here is a very simple class:
+
+```cpp
+class SimpleLED {
+public:                    // ignore "public" for now.
+    int pinNumber;
+    long lastChangeTime;
+    long interval;
+    bool isLit;
+}
+```
+
+All this does is define a recipe that lets you create instances of the class SimpleLED, where each instance has a pinNumber, a lastChangeTime, and an isLit property.
+
+You can create instances like this:
+
+```cpp
+SimpleLED red;
+SimpleLED yellow;
+SimpleLED green;
+
+void setup() {
+    red.pinNumber = 1;
+    red.lastChangeTime = 0;
+    red.period = 1000;
+    red.isLit = false;
+    
+    yellow.pinNumber = 2;
+    yellow.lastChangeTime = 0;
+    yellow.interval = 300;
+    yellow.isLit = false;
+    
+    green.pinNumber = 3;
+    green.lastChangeTime = 0;
+    green.interval = 100;
+    green.isLit = false;
+}
+```
+
