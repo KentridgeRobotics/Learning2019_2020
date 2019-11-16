@@ -102,6 +102,28 @@ We have used the `delay()` function to wait for a while. For example, in our ini
 
 Generally, making a computer do multiple things at once is called "multitasking", and a lot of what goes into an operating system like Windows or Linux is code to make multitasking happen automatically. On the Arduino, there is no operating system, so you need to figure out how to multitask without any automatic help.
 
-Let's look at an example.
+Let's look at an example. Suppose we have a program to blink an LED on and off slowly:
 
+```cpp
+void loop() {
+    digitalWrite(5, HIGH);
+    delay(1000);
+    digitalWrite(5, LOW);
+    delay(1000);
+}
+```
 
+And we have another program to blink an LED on and off quickly:
+
+```cpp
+void loop() {
+    digitalWrite(6, HIGH);
+    delay(111);
+    digitalWrite(6, LOW);
+    delay(111);
+}
+```
+
+Putting together these actions in sequnce doesn't work, because what happens is that the slow LED turns on for 500 ms and turns off for 500 ms, and then the fast LED blinks once (111 ms on and 111 ms off), and then the slow LED takes its turn again.
+
+So, how could you make both the fast-blinking and slow-blinking LEDs blink at the same time?
