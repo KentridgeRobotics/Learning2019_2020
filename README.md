@@ -213,3 +213,8 @@ void setup() {
 ```
 
 For a complete solution of this task using classes, see https://github.com/KentridgeRobotics/Learning2019_2020/blob/master/BlinkMany/BlinkMany.ino
+
+
+# FRC Robot Resources
+
+Drivers for Talon SRX: http://www.ctr-electronics.com/talon-srx.html#product_tabs_technical_resources
