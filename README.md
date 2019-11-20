@@ -218,3 +218,7 @@ For a complete solution of this task using classes, see https://github.com/Kentr
 # FRC Robot Resources
 
 Drivers for Talon SRX: http://www.ctr-electronics.com/talon-srx.html#product_tabs_technical_resources
+
+# GIT
+
+Upload a Git project to github: https://www.wikihow.com/Import-a-Repository-on-Github
