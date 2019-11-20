@@ -221,4 +221,18 @@ Drivers for Talon SRX: http://www.ctr-electronics.com/talon-srx.html#product_tab
 
 # GIT
 
-Upload a Git project to github: https://www.wikihow.com/Import-a-Repository-on-Github
+Upload a Git project to github:
+
+1. Create the git repository on your local machine, either using `git init` or through VS Code
+
+2. On github.com, go to the page for your own repositories. In the dropdown menu on the top-right corner where your picture is, click "Repositories"
+
+3. Click "New" button
+
+4. Fill in the information. Give your repository a name that you will remember.
+
+5. Click "Create Repository", and keep this page open!
+
+6. Open PowerShell and navigate to the base directory of your project using "cd".
+
+7. Follow the directions on the page you kept open for "…or push an existing repository from the command line"
