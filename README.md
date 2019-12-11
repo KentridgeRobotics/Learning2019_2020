@@ -238,7 +238,12 @@ Upload a Git project to github:
 7. Follow the directions on the page you kept open for "…or push an existing repository from the command line"
 
 
+# Arduino Serial communication
+
+https://www.ladyada.net/learn/arduino/lesson4.html
+
 # Making a RoboRio talk to an Arduino over Serial connection
 
 https://www.youtube.com/watch?v=RMHCSwLIyqg
+
 
