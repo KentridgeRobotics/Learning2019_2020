@@ -249,5 +249,13 @@ https://www.youtube.com/watch?v=RMHCSwLIyqg
 
 # Sample of making an Arduino talk to a RoboRio
 
+This example assumes that the Arduino is sending packets over USB with the format:
+
+`$11,22\n`
+
+That is, each line starts with a `$`, followed by an integer, followed by a comma, followed by a second integer, followed by a newline.
+
+The idea of this program is that it will change the motor speed for the x and y direction based on the x and y values taken from the first and second integer in the packet.
+
 https://github.com/KentridgeRobotics/SampleRioArduino2019
 
