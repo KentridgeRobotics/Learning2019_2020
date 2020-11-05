@@ -30,6 +30,15 @@ Try this example to verify that everything is working. You will need an Arduino 
 
 Arduino "Sketches" are written in a variant of C++. Language reference: https://www.arduino.cc/reference/en/
 
+#### Arduino vs Java
+
+As mentioned above, Arduino is based on C++, but luckily C++ and Java are both based on the language C, so they have
+a lot in common! However, there are some notable differences. The following are some useful links to see what these differences are:
+
+- [This page](https://www.cprogramming.com/tutorial/java/syntax-differences-java-c++.html) describes most of the differences between Java and C++ (Arduino). The most useful sections for you will probably be starting at `Booleans`.
+- [The Wikipedia comparison page](https://en.wikipedia.org/wiki/Comparison_of_Java_and_C%2B%2B#Syntax) gives a good side by side comparison of the syntax differences.
+- If you enjoy reading papers, here's a [PDF](http://granite.sru.edu/~whit/cpsc374/Notes/JavaReview/Java-C++comparison.pdf) for you to enjoy.
+
 ### Online tutorials about Arduino
 
 https://learn.adafruit.com/ladyadas-learn-arduino-lesson-number-0/intro
